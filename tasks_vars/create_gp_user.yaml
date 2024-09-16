@@ -1,0 +1,19 @@
+domain_name: "gando.local"
+ou_path: "OU=GA_Users,DC=gando,DC=local"
+group_name: "gando_stu"
+user_password: !vault |
+          $ANSIBLE_VAULT;1.1;AES256
+          66323562636163343139353766656433373131363035386263303833366539626161363464636365
+          6636373632393630643165303766363162366438306564320a396661323865646266323963656437
+          66643163653337396261353138376139306662636262663636633334346436353139643265316438
+          3961336237646131300a346134323938303064373139633237623038323332363532313963363638
+          6663
+user_upn: "{{ user_name }}@{{ domain_name }}"
+
+users:
+  - username: "peyman.hoshmandi"
+    firstname: "Peyman"
+    surname: "Hoshmandi"
+  - username: "Mmd.khodayari"
+    firstname: "Mmd"
+    surname: "Kh"
